@@ -1,56 +1,89 @@
-* {
+:root {
+    --black: rgb(0, 0, 0);
+}
+
+* {    
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
+    margin: 0; 
 }
 
 body {
-    background-color: #eeeff4;
+    background-color: var(--black);
 }
 
-.header  {
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*.header  {
+    display: flex;
+    background-color: var(--black);
     padding: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #31343d;
-    color: #31343d;
-}
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}*/
 
-.header .box {
-    background-color: #90cccc;
-    text-align: left;
-    vertical-align: middle;
-    padding: 10px 10px 10px;
-} 
-
-.header h1 {
-    display: inline-block;
+.headerContainer .neonText {
     font-size: 30px;
-} 
-
-.header nav {
-    padding-top: 15px;
-    margin: auto;
-    float: right;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    animation: flicker 1.5s infinite alternate;
+}
+  @keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 1px #fff,
+      0 0 1px #fff,
+      0 0 1px #fff,
+      0 0 9px #90cccc,
+      0 0 10px #90cccc,
+      0 0 11px #90cccc,
+      0 0 12px #90cccc,
+      0 0 13px #90cccc;
+    }
+    10%, 15%, 25% {       
+      text-shadow: none;
+    }
 }
 
-.header nav ul {
-    list-style-type: none;
+/*.header nav ul {
+    display: flex;
+    height: 23px;
 }
 
-.header nav ul li { 
-    display: inline-block;
-    margin-left: 25px;
+.header li { 
+    list-style: none;
+    margin-right: 10px;
+    border-bottom: 3px #90cccc;
+    display: inline;
+    height: 100%;
+    color: #90cccc;
+    cursor: pointer;
+}
+
+.header li { 
+    text-decoration: none;
+    color: inherit;
 }
 
 a {
     color: #90cccc;
     text-decoration: underline;
 }
+*/
+.headerList {
+    display: flex;
+}
+
+
 
 p {
     font-size: 30px;
+    float: right;
+    margin-right: 0px;
 }
 
 .header2  {
@@ -73,9 +106,35 @@ p {
     padding: 50px;
     height: 300px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #49596f;
+    color: #fff;
     font-size: 30px;
-    
+}
+
+.container h2 {
+    font-size: 25px;
+    border-right: 3px #fff;
+    animation: flicker 1.5s infinite alternate;
+  }
+
+  @keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 1px #fff,
+      0 0 1px #fff,
+      0 0 1px #fff,
+      0 0 12px #90cccc,
+      0 0 20px #90cccc,
+      0 0 31px #90cccc,
+      0 0 43px #90cccc,
+      0 0 52px #90cccc;
+    }
+    20%, 24%, 55% {       
+      text-shadow: none;
+    }
+}
+
+p {
+    font-size: 20px;
 }
 
 .work {
@@ -83,8 +142,29 @@ p {
     padding: 50px;
     height: 300px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #49596f;
-    font-size: 30px;
+    color: #fff;
+    font-size: 25px;
+}
+
+.workContainer h2 {
+    font-size: 25px;
+    animation: flicker 1.5s infinite alternate;
+  }
+  @keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 1px #fff,
+      0 0 1px #fff,
+      0 0 1px #fff,
+      0 0 12px #90cccc,
+      0 0 20px #90cccc,
+      0 0 31px #90cccc,
+      0 0 43px #90cccc,
+      0 0 52px #90cccc;
+    }
+    20%, 24%, 55% {       
+      text-shadow: none;
+    }
 }
 
 .contact-me {
@@ -92,15 +172,38 @@ p {
     padding: 50px;
     height: 200px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #49596f;
-    font-size: 30px;
+    color: #fff;
+    font-size: 25px;
 }
+
+.contactContainer h2 {
+    font-size: 25px;
+    animation: flicker 1.5s infinite alternate;
+  }
+  @keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 1px #fff,
+      0 0 1px #fff,
+      0 0 1px #fff,
+      0 0 12px #90cccc,
+      0 0 20px #90cccc,
+      0 0 31px #90cccc,
+      0 0 43px #90cccc,
+      0 0 52px #90cccc;
+    }
+    20%, 24%, 55% {       
+      text-shadow: none;
+    }
+}
+
+
 .contact-me nav {
     padding-bottom: 15px;
     margin-right: auto;
     float: right;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .contact-me nav ul {
