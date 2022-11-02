@@ -4,6 +4,7 @@
     --darkteal: #0b3e55;
     --teal: #2db0de;
     --lightteal: #115779;
+    --white: #fff;
     --font1: Arial, Helvetica, sans-serif;
 }
 
@@ -31,9 +32,9 @@ header {
     color: var(--lightteal);
 }
 
-
 .headerList {
     display: flex; 
+    color: var(--white);
 }
 .headerList div {
     padding: 20px;
@@ -41,7 +42,8 @@ header {
 } 
 
 .header-image  {
-    height: 150px;
+    display: flex;
+    height: 50px;
     width: 100%;
     margin-bottom: 25px;
     background-image: url("./images/lff-binary-code-header.jpeg");
@@ -49,12 +51,8 @@ header {
     background-position: center;
 } 
 
-.header-image div {
-    display: flex;
-}
-
 .about-me {
-    margin-bottom: 20px;
+    margin: 20px;
     padding:40px;
     height: 200px;
     font-family: var(--font1);
@@ -66,11 +64,10 @@ header {
 }
 
 .about-me div {
+    margin: 40px;
     display: flex;
-    
+    color: var(--white);
 }
-
-
 
 .work-section {
     color: var(--lightteal);
@@ -85,8 +82,8 @@ header {
     border: 5px solid var(--lightteal);
     background-color: var(--teal);
     color: var(--lightteal);
-    min-height: 150px;
-    max-height: 150px;
+    min-height: 400px;
+    min-width: 500px;
     flex-basis: calc(50% - 1em);
     display: flex;
     align-items: flex-end;
@@ -100,6 +97,7 @@ header {
 } 
 
 .flex-container {
+    margin: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
